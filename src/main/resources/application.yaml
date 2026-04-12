@@ -25,5 +25,8 @@ logging:
 
 security:
   jwt:
-    secret: "u8$9JvQZxT2pL!mC5$4%*7&!#k7qY4sF%tP6^Nd3B&XcR1gV*LwUzEoM!hS9Kf2y"
-    expiration: 3600000
+    public-key-path: classpath:app.pub
+
+produtos:
+  api:
+    url: http://localhost:8081
