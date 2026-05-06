@@ -12,9 +12,8 @@ import java.util.Date;
 @Data
 public class Estoque {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+    @Column(unique = true)
+    @Id
     public String sku;
     public Integer quantidade;
     public LocalDateTime data;
@@ -27,13 +26,6 @@ public class Estoque {
         this.data = LocalDateTime.now();
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getSku() {
         return sku;
